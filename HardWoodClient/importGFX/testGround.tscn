@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://importGFX/testGround.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -31.4375, -0.077077, -25.6865, -31.4375, -0.077077, 25.6865, -31.4375, -0.794277, -25.6865, -31.4375, -0.794277, 25.6865, 31.4375, -0.077077, -25.6865, -31.4375, -0.077077, -25.6865, 31.4375, -0.794277, -25.6865, -31.4375, -0.794277, -25.6865, 31.4375, -0.077077, 25.6865, 31.4375, -0.077077, -25.6865, 31.4375, -0.794277, 25.6865, 31.4375, -0.794277, -25.6865, -31.4375, -0.077077, 25.6865, 31.4375, -0.077077, 25.6865, -31.4375, -0.794277, 25.6865, 31.4375, -0.794277, 25.6865, -31.4375, -0.077077, 25.6865, -31.4375, -0.077077, -25.6865, 31.4375, -0.077077, 25.6865, 31.4375, -0.077077, -25.6865, 31.4375, -0.794277, 25.6865, 31.4375, -0.794277, -25.6865, -31.4375, -0.794277, 25.6865, -31.4375, -0.794277, -25.6865 )
+
+[node name="testGround" type="Spatial"]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 1 )
+
+[node name="testGround" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = null
