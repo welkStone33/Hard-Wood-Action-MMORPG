@@ -1,0 +1,159 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scripts/gui/maleButton.gd" type="Script" id=1]
+[ext_resource path="res://scripts/gui/femaleButton.gd" type="Script" id=2]
+[ext_resource path="res://scripts/gui/newCharHud.gd" type="Script" id=3]
+[ext_resource path="res://scripts/gui/hairList.gd" type="Script" id=4]
+[ext_resource path="res://scripts/gui/hairColor.gd" type="Script" id=5]
+[ext_resource path="res://scripts/gui/bodyColor.gd" type="Script" id=6]
+[ext_resource path="res://scripts/gui/eyeList.gd" type="Script" id=7]
+[ext_resource path="res://scripts/gui/mouthList.gd" type="Script" id=8]
+[ext_resource path="res://scripts/gui/classList.gd" type="Script" id=9]
+[ext_resource path="res://scripts/gui/createButton.gd" type="Script" id=10]
+
+[node name="newChar" type="Control"]
+anchor_right = 0.995
+anchor_bottom = 1.0
+margin_right = 0.119934
+margin_bottom = 7.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="maleButton" type="Button" parent="."]
+anchor_left = 0.019
+anchor_top = 0.016
+anchor_right = 0.082
+anchor_bottom = 0.094
+margin_left = -0.0528946
+margin_top = 8.225
+margin_right = -0.249893
+margin_bottom = -0.121006
+text = "Male"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="femaleButton" type="Button" parent="."]
+anchor_left = 0.112
+anchor_top = 0.016
+anchor_right = 0.175
+anchor_bottom = 0.094
+margin_left = 0.424004
+margin_top = 8.225
+margin_right = 0.227066
+margin_bottom = -0.121006
+text = "Female"
+script = ExtResource( 2 )
+
+[node name="hairList" type="ItemList" parent="."]
+anchor_left = 0.026
+anchor_top = 0.147
+anchor_right = 0.174
+anchor_bottom = 0.369
+margin_left = 0.506001
+margin_top = -0.228996
+margin_right = -0.306
+margin_bottom = 0.016983
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hairColor" type="ItemList" parent="."]
+anchor_left = 0.028
+anchor_top = 0.405
+anchor_right = 0.17
+anchor_bottom = 0.614
+margin_left = 0.468
+margin_top = 0.164978
+margin_right = -0.229996
+margin_bottom = 0.301971
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bodyColor" type="ItemList" parent="."]
+anchor_left = 0.031
+anchor_top = 0.659
+anchor_right = 0.173
+anchor_bottom = 0.931
+margin_left = 0.411001
+margin_top = -0.013031
+margin_right = -0.287003
+margin_bottom = -0.117004
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="eyeList" type="ItemList" parent="."]
+anchor_left = 0.83
+anchor_top = 0.148
+anchor_right = 0.978
+anchor_bottom = 0.341
+margin_left = 0.22998
+margin_top = 0.164001
+margin_right = 0.41803
+margin_bottom = 0.0129852
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mouthList" type="ItemList" parent="."]
+anchor_left = 0.832
+anchor_top = 0.415
+anchor_right = 0.981
+anchor_bottom = 0.634
+margin_left = 2.19202
+margin_top = 0.094986
+margin_right = 0.361023
+margin_bottom = 0.161987
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="classList" type="ItemList" parent="."]
+anchor_left = 0.841
+anchor_top = 0.685
+anchor_right = 0.974
+anchor_bottom = 0.937
+margin_left = 0.0210571
+margin_top = 0.204956
+margin_right = 0.494019
+margin_bottom = 0.240967
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="thename" type="LineEdit" parent="."]
+anchor_left = 0.225
+anchor_top = 0.034
+anchor_right = 0.391
+anchor_bottom = 0.103
+margin_left = -0.274994
+margin_top = -0.19754
+margin_right = -0.429016
+margin_bottom = -0.0805435
+text = "NameAvaitor"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="createButton" type="Button" parent="."]
+anchor_left = 0.425
+anchor_top = 0.03
+anchor_right = 0.568
+anchor_bottom = 0.104
+margin_left = 2.16995
+margin_top = -0.210001
+margin_right = 2.45294
+margin_bottom = -0.128002
+text = "Final & Create"
+script = ExtResource( 10 )

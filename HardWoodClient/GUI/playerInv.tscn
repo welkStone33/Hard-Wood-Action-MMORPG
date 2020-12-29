@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GUI/playerInvItemList.gd" type="Script" id=1]
+
+[node name="playerInv" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 72.0
+margin_top = 45.0
+margin_right = -58.0
+margin_bottom = -56.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="."]
+anchor_left = 0.522
+anchor_top = 0.01
+anchor_right = 0.994
+anchor_bottom = 0.731
+margin_left = 0.332001
+margin_top = 2.01
+margin_right = 2.36401
+margin_bottom = 0.230988
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="description" type="Label" parent="."]
+anchor_left = 0.531
+anchor_top = 0.748
+anchor_right = 0.993
+anchor_bottom = 0.946
+margin_left = 0.0678406
+margin_top = -0.0338135
+margin_right = 0.039856
+margin_bottom = 0.164185
+text = "Nothing is selected."
+autowrap = true
+
+[node name="equipInfo" type="Label" parent="."]
+anchor_left = 0.016
+anchor_top = 0.028
+anchor_right = 0.405
+anchor_bottom = 0.717
+margin_left = -0.304001
+margin_top = 0.0279999
+margin_right = 1.93002
+margin_bottom = 6.21704
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="equipInfo"]
+anchor_right = 1.0
+anchor_bottom = 1.0

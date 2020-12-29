@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="msgBox" type="Label"]
+anchor_left = 0.269
+anchor_top = 0.098
+anchor_right = 0.729
+anchor_bottom = 0.22
+margin_left = -0.456024
+margin_top = 0.199997
+margin_right = 0.503967
+margin_bottom = -1.52588e-05
+__meta__ = {
+"_edit_use_anchors_": false
+}
