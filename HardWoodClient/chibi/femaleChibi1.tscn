@@ -1,0 +1,118 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scripts/player/playerCTL.gd" type="Script" id=1]
+[ext_resource path="res://scripts/areaList.gd" type="Script" id=2]
+[ext_resource path="res://scripts/inventoryNode.gd" type="Script" id=3]
+[ext_resource path="res://scripts/gravityNode.gd" type="Script" id=4]
+[ext_resource path="res://scripts/sheet.gd" type="Script" id=6]
+[ext_resource path="res://scripts/types/typeNodePlayer.gd" type="Script" id=7]
+[ext_resource path="res://scripts/player/keyNode.gd" type="Script" id=8]
+[ext_resource path="res://scripts/types/typeNode_hitarea.gd" type="Script" id=9]
+[ext_resource path="res://scripts/types/typeNodeFoot.gd" type="Script" id=10]
+[ext_resource path="res://chibi/femaleChibi1Base.tscn" type="PackedScene" id=11]
+[ext_resource path="res://gamePieces/skillNodePlayer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scripts/player/eyeBlink.gd" type="Script" id=13]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.229403, 0.931809, 0.229403, -0.267263, 0.021039, 0.162634, -0.229403, 0.931809, -0.229403, -0.267263, 0.021039, -0.162634, -0.229403, 0.931809, -0.229403, -0.267263, 0.021039, -0.162634, 0.229403, 0.931809, -0.229403, 0.267263, 0.021039, -0.162634, 0.229403, 0.931809, -0.229403, 0.267263, 0.021039, -0.162634, 0.229403, 0.931809, 0.229403, 0.267263, 0.021039, 0.162634, 0.229403, 0.931809, 0.229403, 0.267263, 0.021039, 0.162634, -0.229403, 0.931809, 0.229403, -0.267263, 0.021039, 0.162634, 0.267263, 0.021039, -0.162634, -0.267263, 0.021039, -0.162634, 0.267263, 0.021039, 0.162634, -0.267263, 0.021039, 0.162634, -0.229403, 0.931809, 0.229403, -0.229403, 0.931809, -0.229403, -0.296848, 1.46117, 0.180637, -0.296848, 1.46117, -0.180637, -0.296848, 1.46117, -0.180637, 0.296848, 1.46117, -0.180637, -0.296848, 1.46117, 0.180637, 0.296848, 1.46117, 0.180637, 0.229403, 0.931809, 0.229403, -0.229403, 0.931809, 0.229403, 0.296848, 1.46117, 0.180637, -0.296848, 1.46117, 0.180637, -0.229403, 0.931809, -0.229403, 0.229403, 0.931809, -0.229403, -0.296848, 1.46117, -0.180637, 0.296848, 1.46117, -0.180637, 0.229403, 0.931809, -0.229403, 0.229403, 0.931809, 0.229403, 0.296848, 1.46117, -0.180637, 0.296848, 1.46117, 0.180637 )
+
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1 )
+
+[node name="femaleChibi" type="KinematicBody"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="keyNode" type="Spatial" parent="."]
+script = ExtResource( 8 )
+
+[node name="physicsBodyShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0359228, 0 )
+shape = SubResource( 1 )
+
+[node name="body" parent="." instance=ExtResource( 11 )]
+
+[node name="forwardNode" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+
+[node name="backwardNode" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="camLook" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.631, 0 )
+
+[node name="camMount" type="Spatial" parent="camLook"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.007 )
+
+[node name="activateArea" type="Area" parent="."]
+monitorable = false
+collision_layer = 0
+script = ExtResource( 2 )
+
+[node name="AttackSquare" type="CollisionShape" parent="activateArea"]
+transform = Transform( 0.247751, 0, 0, 0, 0.509028, 0, 0, 0, 0.615638, 0, 1.27023, 0.908197 )
+shape = SubResource( 2 )
+
+[node name="typeNode" type="Spatial" parent="activateArea"]
+script = ExtResource( 9 )
+
+[node name="sheet" type="Spatial" parent="."]
+script = ExtResource( 6 )
+
+[node name="bodyArea" type="Area" parent="."]
+monitoring = false
+collision_mask = 0
+
+[node name="bodyAreaCollisionShape" type="CollisionShape" parent="bodyArea"]
+transform = Transform( 0.247751, 0, 0, 0, 1.00375, 0, 0, 0, 0.245448, 0, 1.03895, 0.0614823 )
+shape = SubResource( 3 )
+
+[node name="typeNode" type="Spatial" parent="bodyArea"]
+script = ExtResource( 7 )
+
+[node name="footGrounding" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0 )
+monitorable = false
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="footAreaTrigger" type="CollisionShape" parent="footGrounding"]
+transform = Transform( 0.247751, 0, 0, 0, 1.00375, 0, 0, 0, 0.245448, 0, 1.079, 0.061 )
+shape = SubResource( 3 )
+
+[node name="typeNode" type="Spatial" parent="footGrounding"]
+script = ExtResource( 10 )
+
+[node name="gravityNode" type="Spatial" parent="."]
+script = ExtResource( 4 )
+
+[node name="skillNode" parent="." instance=ExtResource( 12 )]
+
+[node name="inventoryNode" type="Spatial" parent="."]
+script = ExtResource( 3 )
+
+[node name="projectNode" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27593, 0.915645 )
+
+[node name="eyeBlink" type="Spatial" parent="."]
+script = ExtResource( 13 )
+
+[node name="testArea" type="Area" parent="."]
+input_ray_pickable = false
+gravity = 0.0
+monitoring = false
+monitorable = false
+collision_layer = 0
+script = ExtResource( 2 )
+
+[node name="testshape" type="CollisionShape" parent="testArea"]
+transform = Transform( 35, 0, 0, 0, 25, 0, 0, 0, 35, 0, 1.50798, 0 )
+shape = SubResource( 4 )
