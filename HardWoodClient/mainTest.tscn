@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://chibi/maleChibi.tscn" type="PackedScene" id=1]
+[ext_resource path="res://importGFX/testGround.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Camera.gd" type="Script" id=3]
+[ext_resource path="res://3dSprite_Numbers/3dText.tscn" type="PackedScene" id=4]
+[ext_resource path="res://terrains/terrain2base.tscn" type="PackedScene" id=5]
+[ext_resource path="res://mobs/scorpion.tscn" type="PackedScene" id=6]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+current = true
+script = ExtResource( 3 )
+
+[node name="scorpion" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.32066, -0.538158, 22.3355 )
+
+[node name="maleChibi" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.6627 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 7.37897, 0 )
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="testGround" parent="." instance=ExtResource( 2 )]
+
+[node name="3dText" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85707, 24.7418, -26.4481 )
+
+[node name="terrain2" parent="." instance=ExtResource( 5 )]

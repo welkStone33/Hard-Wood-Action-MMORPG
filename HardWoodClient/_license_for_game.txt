@@ -1,0 +1,23 @@
+
+
+
+© Godot engine is under MIT permissive license. The below license is for the game, not godot engine. For the game engine godot engine, see the MIT license.
+
+-------------------------------------
+
+'Hard Wood' an Action MMORPG
+Copyright (©) 2020.
+
+All artwork is licensed under CC BY-NC-SA, Creative Commons V4.0, unless otherwise stated. See link for creative commons, https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+---------------------------------------
+
+'Hard Wood' an Action MMORPG
+Copyright (©) 2020.
+
+The program source code, except for the game engine and editor, is license under the GPL V3.0 license. There should be an included file with the project with the GPL v3.0 license agreement. See link: http://www.gnu.org/license for more information on GPL V3.0
+
+
+
+
+
