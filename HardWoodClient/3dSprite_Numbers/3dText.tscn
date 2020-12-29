@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://3dSprite_Numbers/3dText.gd" type="Script" id=1]
+
+[node name="3dText" type="Spatial"]
+script = ExtResource( 1 )
