@@ -9,3 +9,5 @@ The project source code is under GLPV3.
 Artwork is under creative commons 4.0 license. Share alike non-commercial.
 
 Anyone is welcome to make a branch and get some games started, or you can take the finished project and run your own server.
+
+It currently takes long time to upload the project. I'll keep uploading the project. For now you can get the project under release. pkzip archive.
